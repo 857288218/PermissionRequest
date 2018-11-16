@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">permission</string>
+    <!--运行时权限-->
+    <string name="mx_run_permission_open">在设置-应用-%1$s-权限中开启 或 安全管家-应用管理-%2$s中开启</string>
+    <string name="mx_run_permission_normal_function">以正常使用该功能</string>
+    <string name="mx_run_permission_request">权限申请</string>
+    <string name="mx_run_permission_setting">去设置</string>
+    <string name="mx_run_permission_camera">&#160;摄像头&#160;</string>
+    <string name="mx_run_permission_read_contacts">&#160;读取联系人&#160;</string>
+    <string name="mx_run_permission_write_contacts">&#160;修改联系人&#160;</string>
+    <string name="mx_run_permission_record_audio">&#160;录音&#160;</string>
+    <string name="mx_run_permission_access_location">&#160;位置信息&#160;</string>
+    <string name="mx_run_permission_call_phone">&#160;拨打电话&#160;</string>
+    <string name="mx_run_permission_body_sensors">&#160;传感器&#160;</string>
+    <string name="mx_run_permission_external_storage">&#160;存储卡&#160;</string>
+    <string name="mx_run_permission_send_sms">&#160;发送短信&#160;</string>
+    <string name="mx_run_permission_read_sms">&#160;读取短信&#160;</string>
+    <string name="mx_run_permission_read_phone_status">&#160;读取手机识别码&#160;</string>
+    <string name="mx_run_permission">权限</string>
+</resources>
