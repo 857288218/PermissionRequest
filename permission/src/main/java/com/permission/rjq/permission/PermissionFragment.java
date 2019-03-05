@@ -33,6 +33,11 @@ public class PermissionFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
+        //解决API低于23的手机，没有执行onAttach(Context context)，导致权限没有请求(或者使用已经废弃的onAttach(Activity activity)方法)
+        if (isRequestPermissionsOnAttch) {
+            requestPermisions(permissions);
+            isRequestPermissionsOnAttch = false;
+        }
     }
 
     /**
