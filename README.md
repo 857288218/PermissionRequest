@@ -39,4 +39,4 @@ com.permission.rjq.permission.PermissionRequest permissionRequest = new com.perm
             }
 
         });
-欢迎star，
+欢迎使用
