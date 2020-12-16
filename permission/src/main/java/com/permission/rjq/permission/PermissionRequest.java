@@ -24,18 +24,20 @@ public class PermissionRequest {
     }
 
     private PermissionFragment getPermissionsFragment(Activity activity) {
-        PermissionFragment fragment = (PermissionFragment) activity.getFragmentManager().findFragmentByTag(TAG);
-        boolean isNewInstance = fragment == null;
-        if (isNewInstance) {
-            fragment = new PermissionFragment();
-            FragmentManager fragmentManager = activity.getFragmentManager();
-            fragmentManager
-                    .beginTransaction()
-                    .add(fragment, TAG)
-                    .commit();
+        if (!activity.isDestroyed() && !activity.isFinishing()) {
+            PermissionFragment fragment = (PermissionFragment) activity.getFragmentManager().findFragmentByTag(TAG);
+            boolean isNewInstance = fragment == null;
+            if (isNewInstance) {
+                fragment = new PermissionFragment();
+                FragmentManager fragmentManager = activity.getFragmentManager();
+                fragmentManager
+                        .beginTransaction()
+                        .add(fragment, TAG)
+                        .commitAllowingStateLoss();
+            }
+            return fragment;
         }
-
-        return fragment;
+        return null;
     }
 
     /**
